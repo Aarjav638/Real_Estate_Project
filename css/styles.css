@@ -1,31 +1,45 @@
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(246, 246, 246, 1);
+}
 .container {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  padding: 4%;
-  background-color: rgb(246, 246, 246);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
 header {
   background-color: #333;
   height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 header img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
+
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #2cb6d5;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  width: 100%;
 }
 .nav-links {
   display: flex;
@@ -33,7 +47,7 @@ nav {
   flex-direction: row;
   gap: 24px;
   align-items: center;
-  width: 50%;
+  margin-right: 50px;
 }
 nav a {
   text-decoration: none;
@@ -50,23 +64,22 @@ nav a:hover {
   color: white;
   display: flex;
   justify-content: space-around;
-  padding: 5%;
   align-items: center;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  width: 100%;
 }
 .footer div {
   display: flex;
-  flex-direction: row;
-  gap: 50px;
-  align-items: center;
+  gap: 10px;
 }
-.footer div a {
-  color: white;
+.footer a {
+  color: #fff;
+  margin: 0 10px;
   text-decoration: none;
 }
-.footer div a:hover {
-  color: blue;
+
+.footer a:hover {
   text-decoration: underline;
 }
 .video {
@@ -75,27 +88,27 @@ nav a:hover {
   align-items: center;
   background-color: rgb(246, 246, 246);
   margin: 2%;
+  border-radius: 10px;
+  width: 100%;
 }
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin-top: 2%;
-  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
 }
 
 .feature {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
-  width: 400px;
   margin: 2%;
   border-radius: 10px;
   padding: 2%;
   background-color: white;
-  box-shadow: black 0px 0px 10px;
-  /* aspect-ratio: 1/1; */
+  box-shadow: 0px 0px 10px black;
 }
 .feature h2 {
   text-align: center;
@@ -114,6 +127,7 @@ nav a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .testimonial {
   display: flex;
@@ -124,7 +138,7 @@ nav a:hover {
   border-radius: 10px;
   padding: 2%;
   background-color: white;
-  box-shadow: black 0px 0px 10px;
+  box-shadow: 0px 0px 10px black;
 }
 .testimonial img {
   border-radius: 50%;
@@ -139,19 +153,15 @@ nav a:hover {
   text-align: center;
   font-size: 18px;
 }
-.aboutus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2%;
-}
+
 .contact {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 2%;
+  gap: 20px;
+  width: 100%;
 }
 form {
   background-color: #fff;
@@ -172,7 +182,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -199,6 +209,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
   justify-content: center;
 }
 
@@ -209,14 +220,7 @@ button:hover {
   justify-content: center;
   margin-top: 2%;
 }
-.contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 2%;
-  gap: 20px;
-}
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -234,31 +238,21 @@ button:hover {
     flex-direction: column;
   }
   .testimonial {
-    width: 80%;
+    width: 90%;
   }
   .contact {
     flex-direction: column;
   }
-  .form {
-    width: 85%;
-    align-self: center;
-  }
   .footer {
     flex-direction: column;
-  }
-  .footer div {
-    flex-direction: row;
-    gap: 10px;
     text-align: center;
   }
   .nav-links {
     display: none;
   }
   .video {
-    width: 30%;
-    height: 50%;
-    align-self: center;
-    margin-top: 2%;
+    width: 90%;
+    margin: 2% 0;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -266,6 +260,6 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .feature {
-    width: 80%;
+    width: 90%;
   }
 }
